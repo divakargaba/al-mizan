@@ -89,6 +89,7 @@ body {
   font-family: var(--font-arabic);
 }
 
+@layer components {
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -139,6 +140,8 @@ body {
   border-color: var(--gold);
   background: var(--gold-soft);
   color: var(--gold);
+}
+
 }
 
 :focus-visible {

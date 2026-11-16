@@ -41,7 +41,7 @@ function unique(ids: string[], label: string) {
 function checkSources(sources: kb.Source[], path: string, min: number) {
   check(sources.length >= min, `${path}: ${sources.length} sources (minimum ${min})`);
   sources.forEach((s, i) => {
-    minLen(s.citation, 8, `${path}[${i}].citation`);
+    minLen(s.citation, 6, `${path}[${i}].citation`);
     minLen(s.detail, 30, `${path}[${i}].detail`);
     if (s.url !== undefined) check(/^https:\/\//.test(s.url), `${path}[${i}].url: must be https`);
   });

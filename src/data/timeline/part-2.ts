@@ -146,7 +146,7 @@ export const timelinePart2: TimelineMilestone[] = [
         citation: "Tübingen, Universitätsbibliothek, Ma VI 165 (digitised)",
         detail:
           "The holding library's digital facsimile of the 77 folios, allowing the script, corrections and later red vowel dots to be examined directly.",
-        url: "http://idb.ub.uni-tuebingen.de/opendigi/MaVI165",
+        url: "https://idb.ub.uni-tuebingen.de/opendigi/MaVI165",
       },
     ],
   },
