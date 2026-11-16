@@ -77,6 +77,7 @@ export const r07: Refutation = {
     {
       kind: "academic",
       citation: "Hossein Modarressi, 'Early Debates on the Integrity of the Qur'an: A Brief Survey', Studia Islamica 77 (1993), 5–39",
+      url: "https://doi.org/10.2307/1595789",
       detail:
         "Traces the circulation of reports such as the longer Ahzab in early Sunni tradition and their later polemical use; important for understanding their historical setting without assuming they describe a real loss.",
     },

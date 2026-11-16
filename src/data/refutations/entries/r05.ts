@@ -91,6 +91,7 @@ export const r05: Refutation = {
     {
       kind: "academic",
       citation: "Hossein Modarressi, 'Early Debates on the Integrity of the Qur'an: A Brief Survey', Studia Islamica 77 (1993), 5–39",
+      url: "https://doi.org/10.2307/1595789",
       detail:
         "Surveys early Sunni reports about verses not found in the mushaf and how they were later used in Sunni–Shi'i polemic; shows the reports predate the systematic doctrine built on them.",
     },

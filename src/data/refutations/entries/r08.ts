@@ -78,7 +78,6 @@ export const r08: Refutation = {
       citation: "Shahab Ahmed, Before Orthodoxy: The Satanic Verses in Early Islam (Harvard University Press, 2017)",
       detail:
         "Analyses about fifty early reports and argues that Muslims of the first two centuries widely accepted the incident, with rejection becoming orthodox later. Establishes the breadth of early acceptance; it does not claim the words survived in the Quran.",
-      url: "https://www.hup.harvard.edu/books/9780674047426",
     },
     {
       kind: "academic",
