@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@import "@fontsource-variable/inter";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/600.css";
+@import "@fontsource/amiri-quran/400.css";
+@import "@fontsource/scheherazade-new/400.css";
+@import "@fontsource/scheherazade-new/700.css";
+
+:root,
+html[data-theme="obsidian"] {
+  --bg: #0b0d10;
+  --surface: #13161b;
+  --surface-2: #1b1f26;
+  --line: #2a2f38;
+  --ink: #ece7da;
+  --muted: #9c978a;
+  --gold: #d0aa55;
+  --gold-soft: rgba(208, 170, 85, 0.14);
+  --emerald: #4fb394;
+  --crimson: #d4695c;
+  --azure: #6aa3d8;
+  --violet: #a78bda;
+  color-scheme: dark;
+}
+
+html[data-theme="parchment"] {
+  --bg: #f3ead4;
+  --surface: #fbf5e4;
+  --surface-2: #efe4c8;
+  --line: #d6c7a1;
+  --ink: #2a2216;
+  --muted: #6b5f48;
+  --gold: #8a6414;
+  --gold-soft: rgba(138, 100, 20, 0.12);
+  --emerald: #1f7358;
+  --crimson: #a63d30;
+  --azure: #2c6396;
+  --violet: #6a4aa3;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-emerald: var(--emerald);
+  --color-crimson: var(--crimson);
+  --color-azure: var(--azure);
+  --color-violet: var(--violet);
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-quran: "Amiri Quran", "Scheherazade New", serif;
+  --font-arabic: "Scheherazade New", "Amiri Quran", serif;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Arabic: generous line-height + padding so tashkeel never clips. */
+.arabic {
+  direction: rtl;
+  unicode-bidi: isolate;
+  letter-spacing: 0;
+  line-height: 2.3;
+  padding-block: 0.15em;
+  overflow: visible;
+  font-feature-settings: "liga", "calt", "ccmp", "mark", "mkmk";
+}
+.arabic-quran {
+  font-family: var(--font-quran);
+  line-height: 2.6;
+}
+.arabic-plain {
+  font-family: var(--font-arabic);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  padding: 0.5rem 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, opacity 0.15s;
+}
+.btn:hover:not(:disabled) {
+  border-color: var(--gold);
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn-gold {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--bg);
+  font-weight: 600;
+}
+.btn-active {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.prose-al p + p {
+  margin-top: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
